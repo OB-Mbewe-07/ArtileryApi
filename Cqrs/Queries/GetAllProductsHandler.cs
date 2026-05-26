@@ -1,5 +1,5 @@
-using Cqrs.Data;
-using Microsoft.EntityFrameworkCore;
+using System.Data;
+using Dapper;
 
 namespace Cqrs.Queries;
 
@@ -13,21 +13,25 @@ public class ProductSummaryDto
 
 public class GetAllProductHandler
 {
-    private readonly AppDbContext _db;
-    public GetAllProductHandler(AppDbContext db)
+    private readonly IDbConnection _db;
+    public GetAllProductHandler(IDbConnection db)
     {
         _db = db;
     }
 
-    public async Task<List<ProductSummaryDto>> handler()
+    public async Task<IEnumerable<ProductSummaryDto>> handler()
     {
-        return await _db.Products.AsNoTracking().Select(p => new ProductSummaryDto
-        {
-            Id = p.Id,
-            Name = p.Name,
-            Price = p.Price,
-            StockStatus = p.StockQuanitity > 0 ? "In Stock" : "Out of. stock"
-        })
-        .ToListAsync();
+       const string sql = """
+            SELECT 
+                Id,
+                Name,
+                Price,
+                CASE WHEN StockQuanitity > 0 
+                     THEN 'In Stock' 
+                     ELSE 'Out of Stock' 
+                END as StockStatus
+            FROM Products
+            """;
+        return await _db.QueryAsync<ProductSummaryDto>(sql);
     }
 }

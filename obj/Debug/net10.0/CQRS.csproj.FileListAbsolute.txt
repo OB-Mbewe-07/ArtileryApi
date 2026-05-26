@@ -149,3 +149,4 @@
 /Users/oarabilembewe/Downloads/CQRS/obj/Debug/net10.0/CQRS.pdb
 /Users/oarabilembewe/Downloads/CQRS/obj/Debug/net10.0/CQRS.genruntimeconfig.cache
 /Users/oarabilembewe/Downloads/CQRS/obj/Debug/net10.0/ref/CQRS.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/Dapper.dll

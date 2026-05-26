@@ -1,0 +1,38 @@
+config:
+  target: "http://localhost:5178"
+  phases:
+    - duration: 10
+      arrivalRate: 2
+      name: "Warm up"
+    - duration: 30
+      arrivalRate: 10
+      name: "Ramp up load"
+    - duration: 20
+      arrivalRate: 50
+      name: "Peak load"
+
+scenarios:
+  - name: "Create a product"
+    weight: 1
+    flow:
+      - post:
+          url: "/api/products"
+          headers:
+            Content-Type: "application/json"
+          json:
+            name: "Test Product"
+            description: "Created by Artillery"
+            price: 29.99
+            stockQuantity: 10
+
+  - name: "Get all products"
+    weight: 3
+    flow:
+      - get:
+          url: "/api/products"
+
+  - name: "Get product by ID"
+    weight: 2
+    flow:
+      - get:
+          url: "/api/products/1"
