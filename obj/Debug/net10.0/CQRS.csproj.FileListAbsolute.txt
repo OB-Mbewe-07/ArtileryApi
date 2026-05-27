@@ -150,3 +150,12 @@
 /Users/oarabilembewe/Downloads/CQRS/obj/Debug/net10.0/CQRS.genruntimeconfig.cache
 /Users/oarabilembewe/Downloads/CQRS/obj/Debug/net10.0/ref/CQRS.dll
 /Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/Dapper.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/results.json
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/MediatR.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/MediatR.Contracts.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/Microsoft.IdentityModel.Logging.dll
+/Users/oarabilembewe/Downloads/CQRS/bin/Debug/net10.0/Microsoft.IdentityModel.Tokens.dll
+/Users/oarabilembewe/Downloads/CQRS/obj/Debug/net10.0/CQRS.sourcelink.json
